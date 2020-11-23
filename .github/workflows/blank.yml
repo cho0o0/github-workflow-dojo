@@ -31,4 +31,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Wait for MySQL
-        run: for i in {1..10}; do mysqladmin ping --user=root --port=13306 -ppassword && exit 0; sleep 5; done; exit 1
+        run: for i in {1..10}; do mysqladmin ping --user=root --host=127.0.0.1 --port=13306 -ppassword && exit 0; sleep 5; done; exit 1
